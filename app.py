@@ -7,13 +7,15 @@ LISTINGS =[
   'id': 1,
   'title': 'bed frame',
   'location': 'Philadelphia',
-  'price': '400'
+  'price': '400',
+  'email': 'email@gmail.com'
   },
   {
   'id': 2,
   'title': 'desk',
   'location': 'Philadelphia',
-  'price': '150'
+  'price': '150',
+  'email': 'nothing'
   },
   {
   'id': 3,
