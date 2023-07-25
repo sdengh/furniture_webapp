@@ -4,61 +4,39 @@
 
 </head>
   <!-- information used to reder the body, for example decors -->
-  <title>Furniture Webapp Name</title>
+  <title>Furniture Webapp Name</title> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <style>
-    h1 {
-      font-size: 40px;
-      font-family: 'Lucida Grande', monospace;
-      font-weight: bold;
-      color: rgb(150,100,200);
-      text-align: center;
-    }
-
     #banner {
-      width: 100%;
       height: 400px;
+      width: 100%;
       object-fit: cover;
-    }
-
-    h2 {
-      font-family: Roboto;
-      font-size: 32px;
-      color: rgb(0, 0, 0);
-      text-align: center;
-      font-weight: normal;
-    }
-
-    .bodytext{
-      font-family: Roboto;
-      font-size: 28;
-    }
-
-    #container {
-      max-width: 700px;
-      margin: 0 auto 0 auto;
-      <!-- or do 0 auto -->
-      
     }
   </style>
   
-  
   <body>
-    <div id="container">
+    <div class="container">
       
-    <h1>FURNITURE SELL WEBSITE NAME</h1>
-    <img id="banner" src = "https://furniturewebapp--sdengh.repl.co/static/banner.jpeg" height="320">
-    <h2>About NAME</h2>
-    <p class="bodytext"> 
+    <h1 class="text-center mt-4 mb-4">FURNITURE SELL WEBSITE NAME</h1>
+    <img class="img-fluid" id="banner" src = "https://furniturewebapp--sdengh.repl.co/static/banner.jpeg" height="320">
+    <h2 class="text-center mt-4 mb-4">About NAME</h2>
+    <p class="lead"> 
       generate paragraph usign lorem ipsum generator.
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
+      
     <h2>New Postings</h2>
-    <p class="bodytext">
-      TO DO - show posts here
+    <p>
+      {% for listing in listings %}
+        {% include 'listingitem.html' %}
+      {% endfor %}
     </p>
-      <div style="text-align:center;">
-    <bottun>Create Listing</bottun>
-        <p>copyright 2023, Furniture</p>
+
+      <div class="text-center">
+    <bottun class="btn btn-primary btn-lg">Create Listing</bottun>
+        <p class="mt-4">copyright 2023, Furniture</p>
       </div>
     </div>
   </body>
